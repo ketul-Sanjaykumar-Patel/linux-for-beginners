@@ -1,39 +1,15 @@
-# Contributing to Linux for Beginners
+# Changelog
 
-Thank you for your interest in contributing! 🎉
+All notable changes to this project will be documented here.
 
-## How to Report a Bug
-1. Search existing issues first
-2. Open a new issue
-3. Include: what you did, what you expected, what happened
+## [1.0.0] - 2026-03-23
 
-## How to Suggest Content
-1. Open an issue describing what you want to add
-2. Explain why it would help beginners
-
-## How to Submit Changes
-1. Fork this repository
-2. Create a branch: `git checkout -b fix/your-fix`
-3. Make your changes
-4. Push: `git push origin fix/your-fix`
-5. Open a Pull Request
-
-## What We Welcome
-- Fixing typos or errors in guides
-- Adding more command examples
-- Improving explanations
-- Adding new exercises
-- Translating content
-
-## Commit Message Format
-```bash
-feat:   # New content added
-fix:    # Correction to existing content
-docs:   # Documentation improvement
-chore:  # Repo maintenance
-```
-
-## Code of Conduct
-- Be respectful and welcoming
-- Help beginners feel comfortable asking questions
-- Keep explanations simple and clear
+### Added
+- 11 complete Linux guide chapters (00 through 10)
+- 6 working bash scripts (system-info, health-check, backup, install-essentials, user-setup, network-check)
+- 5 cheatsheets (commands, vim, git, networking, permissions)
+- Ready-to-use config files (.bashrc, .vimrc, .gitconfig, sshd_config, crontab)
+- Embedded Linux section (Raspberry Pi, GPIO, I2C, Serial)
+- Beginner and intermediate exercises with full answers
+- MIT License
+- Contributing guide
