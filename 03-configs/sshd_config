@@ -1,0 +1,37 @@
+# ─────────────────────────────────────────
+# sshd_config — Secure SSH server config
+# Part of: linux-for-beginners by Ketul Patel
+# Usage: sudo cp sshd_config /etc/ssh/sshd_config
+#        sudo systemctl restart sshd
+# ─────────────────────────────────────────
+
+# Port (change from 22 to reduce bot attacks)
+Port 22
+
+# Only allow IPv4
+AddressFamily inet
+
+# Authentication
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
+
+# Security
+MaxAuthTries 3
+MaxSessions 5
+LoginGraceTime 30
+
+# Disable unused features
+X11Forwarding no
+AllowTcpForwarding no
+GatewayPorts no
+PermitEmptyPasswords no
+
+# Logging
+LogLevel INFO
+SyslogFacility AUTH
+
+# Keep connections alive
+ClientAliveInterval 300
+ClientAliveCountMax 2
