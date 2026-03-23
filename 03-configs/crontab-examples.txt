@@ -1,0 +1,43 @@
+# ─────────────────────────────────────────
+# crontab-examples.txt — Cron job examples
+# Part of: linux-for-beginners by Ketul Patel
+# Usage: crontab -e   then paste what you need
+# ─────────────────────────────────────────
+
+# Cron format:
+# * * * * * command
+# │ │ │ │ └── Day of week (0-7, 0=Sunday)
+# │ │ │ └──── Month (1-12)
+# │ │ └────── Day of month (1-31)
+# │ └──────── Hour (0-23)
+# └────────── Minute (0-59)
+
+# ── Every minute ─────────────────────────
+* * * * * /usr/bin/check.sh
+
+# ── Every 5 minutes ──────────────────────
+*/5 * * * * /usr/bin/health-check.sh
+
+# ── Every hour ───────────────────────────
+0 * * * * /usr/bin/hourly.sh
+
+# ── Every day at 2:00 AM ─────────────────
+0 2 * * * /usr/bin/backup.sh
+
+# ── Every day at midnight ────────────────
+0 0 * * * /usr/bin/daily-report.sh
+
+# ── Every Monday at 9:00 AM ──────────────
+0 9 * * 1 /usr/bin/weekly-report.sh
+
+# ── First day of every month ─────────────
+0 0 1 * * /usr/bin/monthly-cleanup.sh
+
+# ── Every weekday at 8:00 AM ─────────────
+0 8 * * 1-5 /usr/bin/workday.sh
+
+# ── At system reboot ─────────────────────
+@reboot /usr/bin/startup.sh
+
+# ── With logging ─────────────────────────
+0 2 * * * /usr/bin/backup.sh >> /var/log/backup.log 2>&1
